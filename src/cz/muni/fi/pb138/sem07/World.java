@@ -26,16 +26,27 @@ public class World extends Part {
     }
 
     public Continent[] getContinents() {
-//        NodeList continentsNl;
         Continent[] continents = null;
         NodeList continentsNl = element.getElementsByTagName("continent");
-        if (continentsNl.getLength() > 0) {
+        if (! continentsNl.equals(null)) {
             continents = new Continent[continentsNl.getLength()];
             for (int i = 0; i < continentsNl.getLength(); i++) {
-                continents[i] = Continent.factory((Element)continentsNl.item(i));
+                continents[i] = Continent.factory((Element) continentsNl.item(i));
             }
         }
         return continents;
+    }
+
+    public Continent getContinent(String name) {
+        Continent[] continents = getContinents();
+        Continent result = null;
+        for (Continent continent : continents) {
+            if (continent.getName().equals(name)) {
+                result = continent;
+                break;
+            }
+        }
+        return result;
     }
 
     @Override

@@ -33,7 +33,7 @@ public abstract class Part {
 
     public abstract String getName(); 
 
-    private String getNodeTextValue(String tag) throws DOMException {
+    protected String getNodeTextValue(String tag) throws DOMException {
         String text = null;
         NodeList nl = element.getChildNodes();
         for (int i = 0; i < nl.getLength(); i++) {

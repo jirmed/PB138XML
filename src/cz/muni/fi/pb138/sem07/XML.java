@@ -32,17 +32,22 @@ public class XML {
      * this one
      */
     private static void doMyXMLTransformations(Document document) {
-        Element docEl = document.getDocumentElement();
-        World world = World.factory(docEl);
+        World world = World.factory(document.getDocumentElement());
         System.out.println(world);
-        Continent[] continents = world.getContinents();
-        System.out.println(continents[0]);
-        System.out.println(continents.length);
-        for (Continent continent : continents) {
-            System.out.println(continent.getName());
-        } //  Start by getting the root node from org.w3c.dom.Document
+        printParts(world.getContinents()); 
+        System.out.println(world.getContinent("africa"));
+        printParts(world.getContinent("africa").getCities());
+        
+        Continent continent = world.getContinent("africa");
+        System.out.println(continent + " - Largest city:" + continent.getLargestCity());
     
                 
+    }
+
+    private static void printParts(Part[] parts) {
+        for (Part part : parts) {
+            System.out.println(part.getName());
+        }
     }
 
 }
