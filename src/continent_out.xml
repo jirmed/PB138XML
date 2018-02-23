@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!-- data might not be accurate, it is just for exercises --><world>
+    <continent name="asia">
+        <name>testname</name>
+        <cities>
+            <city id="1">
+                <name>Tokio</name> 
+                <population>13513734</population>
+                <pollution>medium</pollution>
+            </city>
+            <city id="2">
+                <name>Mumbai</name> 
+                <population>12442373</population>
+                <pollution>high</pollution>
+            </city>
+            <city id="3">
+                <name>Delhi</name> 
+                <population>16787941</population>
+                <pollution>high</pollution>
+            </city>
+            <city id="4">
+                <name>Shangai</name> 
+                <population>24256800</population>
+                <pollution>high</pollution>
+            </city>
+            <city id="5">
+                <name>Ho Chi Minh City</name> 
+                <population>8224400</population>
+                <pollution>high</pollution>
+            </city>
+            <city id="6">
+                <name>Hanoi</name> 
+                <population>7232700</population>
+                <pollution>high</pollution>
+            </city>
+            <city id="7">
+                <name>Yokohama</name> 
+                <population>3726167</population>
+                <pollution>medium</pollution>
+            </city>
+        </cities>
+    </continent>
+    
+    <continent name="africa">
+        <cities>
+            <city id="1">
+                <name>Cairo</name> 
+                <population>9278441</population>
+                <pollution>high</pollution>
+            </city>
+            <city id="2">
+                <name>Lagos</name> 
+                <population>16060303</population>
+                <pollution>high</pollution>
+            </city>
+            <city id="3">
+                <name>Kinshasa</name> 
+                <population>9735000</population>
+                <pollution>high</pollution>
+            </city>
+            <city id="4">
+                <name>Alexandria</name> 
+                <population>4616625</population>
+                <pollution>high</pollution>
+            </city>
+            <city id="5">
+                <name>Cape Town</name> 
+                <population>3740026</population>
+                <pollution>high</pollution>
+            </city>
+            <city id="6">
+                <name>Johannesburg</name> 
+                <population>4434827</population>
+                <pollution>high</pollution>
+            </city>
+            <city id="7">
+                <name>Giza</name> 
+                <population>4239988</population>
+                <pollution>high</pollution>
+            </city>
+        </cities>
+    </continent>
+
+    <continent name="europe">
+        <cities>
+            <city id="1">
+                <name>London</name> 
+                <population>8673713</population>
+                <pollution>medium</pollution>
+            </city>
+            <city id="2">
+                <name>Moscow</name> 
+                <population>12197596</population>
+                <pollution>medium</pollution>
+            </city>
+            <city id="3">
+                <name>Berlin</name> 
+                <population>3510000</population>
+                <pollution>medium</pollution>
+            </city>
+            <city id="4">
+                <name>Madrid</name> 
+                <population>3207247</population>
+                <pollution>medium</pollution>
+            </city>
+            <city id="5">
+                <name>Rome</name> 
+                <population>2874038</population>
+                <pollution>medium</pollution>
+            </city>
+            <city id="6">
+                <name>Paris</name> 
+                <population>2241346</population>
+                <pollution>medium</pollution>
+            </city>
+            <city id="7">
+                <name>Vienna</name> 
+                <population>1840573</population>
+                <pollution>low</pollution>
+            </city>
+            <city id="8">
+                <name>Prague</name> 
+                <population>1259079</population>
+                <pollution>medium</pollution>
+            </city>
+        </cities>
+    </continent>
+    
+    <continent name="america">
+        <cities>
+            <city id="1">
+                <name>Mexico City</name> 
+                <population>8874724</population>
+                <pollution>high</pollution>
+            </city>
+            <city id="2">
+                <name>San Paolo</name> 
+                <population>12038175</population>
+                <pollution>high</pollution>
+            </city>
+            <city id="3">
+                <name>Rio de Janeiro</name> 
+                <population>6498837</population>
+                <pollution>high</pollution>
+            </city>
+            <city id="4">
+                <name>New York</name> 
+                <population>8550405</population>
+                <pollution>high</pollution>
+            </city>
+            <city id="5">
+                <name>Los Angeles</name> 
+                <population>3884307</population>
+                <pollution>high</pollution>
+            </city>
+            <city id="6">
+                <name>Buenos Aires</name> 
+                <population>3054300</population>
+                <pollution>high</pollution>
+            </city>
+            <city id="7">
+                <name>Lima</name> 
+                <population>8693387</population>
+                <pollution>high</pollution>
+            </city>
+            <city id="8">
+                <name>Santiago</name> 
+                <population>5743719</population>
+                <pollution>high</pollution>
+            </city>
+            <city id="9">
+                <name>Bogotá</name> 
+                <population>7776845</population>
+                <pollution>high</pollution>
+            </city>
+        </cities>
+    </continent>
+
+</world>
