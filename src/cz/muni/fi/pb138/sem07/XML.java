@@ -32,13 +32,14 @@ public class XML {
      * this one
      */
     private static void doMyXMLTransformations(Document document) {
-        World world = World.factory(document.getDocumentElement());
+        Element docEl = document.getDocumentElement();
+        World world = World.factory(docEl);
         System.out.println(world);
         Continent[] continents = world.getContinents();
         System.out.println(continents[0]);
         System.out.println(continents.length);
         for (Continent continent : continents) {
-            System.out.println(continent.getTextName());
+            System.out.println(continent.getName());
         } //  Start by getting the root node from org.w3c.dom.Document
     
                 

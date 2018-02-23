@@ -10,8 +10,8 @@ import org.w3c.dom.*;
  * @author jiri21
  */
 public class Continent extends Part{
-    protected Continent(Node node) {
-        super(node);
+    protected Continent(Element element) {
+        super(element);
     }
     
     /**
@@ -19,8 +19,13 @@ public class Continent extends Part{
      * @param element
      * @return
      */
-    public static Continent factory(Node node) {
-        return new Continent(node);
+    public static Continent factory(Element element) {
+        return new Continent(element);
+    }
+
+    @Override
+    public String getName() {
+        return element.getAttribute("name");
     }
     
 }

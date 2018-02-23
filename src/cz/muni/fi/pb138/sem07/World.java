@@ -15,26 +15,31 @@ public class World extends Part {
 
     /**
      *
-     * @param node
+     * @param element
      */
-    protected World(Node node) {
-        super(node);
+    protected World(Element element) {
+        super(element);
     }
 
-    public static World factory(Node node) {
-        return new World(node);
+    public static World factory(Element element) {
+        return new World(element);
     }
 
     public Continent[] getContinents() {
 //        NodeList continentsNl;
         Continent[] continents = null;
-        NodeList continentsNl = ((Element)node).getElementsByTagName("continent");
+        NodeList continentsNl = element.getElementsByTagName("continent");
         if (continentsNl.getLength() > 0) {
             continents = new Continent[continentsNl.getLength()];
             for (int i = 0; i < continentsNl.getLength(); i++) {
-                continents[i] = Continent.factory(continentsNl.item(i));
+                continents[i] = Continent.factory((Element)continentsNl.item(i));
             }
         }
         return continents;
+    }
+
+    @Override
+    public String getName() {
+        return getNodeName();
     }
 }

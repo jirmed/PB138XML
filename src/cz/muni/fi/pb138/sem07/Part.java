@@ -11,35 +11,33 @@ import org.w3c.dom.*;
  *
  * @author jiri21
  */
-public class Part {
+public abstract class Part {
 
-    protected Node node;
+    protected Element element;
 
     /**
      *
-     * @param node
+     * @param element
      */
-    protected Part(Node node) {
-        setNode(node);
+    protected Part(Element element) {
+        setElement(element);
     }
 
-    private void setNode(Node node) {
-        this.node = node;
+    private void setElement(Element element) {
+        this.element =  element;
     }
 
     public String getNodeName() {
-        return this.node.getNodeName();
+        return this.element.getNodeName();
     }
 
-    public String getTextName() {
-        return getNodeTextValue("name");
-    }
+    public abstract String getName(); 
 
     private String getNodeTextValue(String tag) throws DOMException {
         String text = null;
-        NodeList nl = node.getChildNodes();
+        NodeList nl = element.getChildNodes();
         for (int i = 0; i < nl.getLength(); i++) {
-            if (nl.item(i).getNodeName() == tag) {
+            if (nl.item(i).getNodeName().equals(tag)) {
                 text = nl.item(i).getFirstChild().getNodeValue();
                 break;
             }
@@ -49,7 +47,7 @@ public class Part {
 
     @Override
     public String toString() {
-        return getNodeName();
+        return getName();
     }
 
 }

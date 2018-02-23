@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package cz.muni.fi.pb138.sem07;
-import org.w3c.dom.Node;
+import org.w3c.dom.*;
 
 /**
  *
@@ -12,8 +12,13 @@ import org.w3c.dom.Node;
  */
 public class City extends Part {
     
-    protected City(Node node) {
-        super(node);
+    protected City(Element element) {
+        super(element);
+    }
+
+    @Override
+    public String getName() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
