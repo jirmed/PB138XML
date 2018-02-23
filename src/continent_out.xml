@@ -48,11 +48,7 @@
                 <population>9278441</population>
                 <pollution>high</pollution>
             </city>
-            <city id="2">
-                <name>Lagos</name> 
-                <population>16060303</population>
-                <pollution>high</pollution>
-            </city>
+            
             <city id="3">
                 <name>Kinshasa</name> 
                 <population>9735000</population>

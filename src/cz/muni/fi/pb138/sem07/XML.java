@@ -40,6 +40,9 @@ public class XML {
         
         Continent continent = world.getContinent("africa");
         System.out.println(continent + " - Largest city:" + continent.getLargestCity());
+        
+        continent.getCity("Lagos").remove();
+        System.out.println(continent + " - Largest city:" + continent.getLargestCity());
     
                 
     }

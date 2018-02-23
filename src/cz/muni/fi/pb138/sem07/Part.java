@@ -44,6 +44,12 @@ public abstract class Part {
         }
         return text;
     }
+    
+    public void remove() {
+        element.getParentNode().removeChild(element);
+        element=null;
+    }
+            
 
     @Override
     public String toString() {
