@@ -24,7 +24,6 @@ public class XML {
         // ... TODO: if you need, you can add more methods here for transformations ...
         
         domParser.saveDocumentToFile("src/continent_out.xml");
-        domParser.outputDocumentToConsole();
 
     }
 
@@ -33,30 +32,10 @@ public class XML {
      * this one
      */
     private static void doMyXMLTransformations(Document document) {
-        World world = World.factory(document.getDocumentElement());
-        System.out.println(world);
-        printParts(world.getContinents()); 
-        System.out.println(world.getContinent("africa"));
-        printParts(world.getContinent("africa").getCities());
-        
-        Continent continent = world.getContinent("africa");
-        System.out.println(continent + " - Largest city:" + continent.getLargestCity());
-        
-        continent.getCity("Lagos").remove();
-        System.out.println(continent + " - Largest city:" + continent.getLargestCity());
-        
-        continent.createCity("New City", 1000, "high");
-        
-        
-        world.getContinent("europe").setName("oceania");
+
+        //  Start by getting the root node from org.w3c.dom.Document
     
                 
-    }
-
-    private static void printParts(Part[] parts) {
-        for (Part part : parts) {
-            System.out.println(part.getName());
-        }
     }
 
 }
