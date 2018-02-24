@@ -34,8 +34,9 @@ public class XML {
     private static void doMyXMLTransformations(Document document) {
 
         //  Start by getting the root node from org.w3c.dom.Document
-    
+        World world = new World(document.getDocumentElement());
                 
     }
+
 
 }
