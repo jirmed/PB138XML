@@ -2,7 +2,6 @@
 <!-- data might not be accurate, it is just for exercises -->
 <world>
     <continent name="asia">
-        <name>testname</name>
         <cities>
             <city id="1">
                 <name>Tokio</name> 

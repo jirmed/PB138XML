@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!-- data might not be accurate, it is just for exercises --><world>
     <continent name="asia">
-        <name>testname</name>
         <cities>
             <city id="1">
                 <name>Tokio</name> 
@@ -74,10 +73,15 @@
                 <population>4239988</population>
                 <pollution>high</pollution>
             </city>
-        </cities>
+        <name>
+<name>New City</name>
+<population>1000</population>
+<pollution>high</pollution>
+</name>
+</cities>
     </continent>
 
-    <continent name="europe">
+    <continent name="oceania">
         <cities>
             <city id="1">
                 <name>London</name> 

@@ -62,6 +62,26 @@ public class Continent extends Part {
         }
         return largestCity;
     }
+    
+    public void setName(String name) {
+        element.setAttribute("name", name);
+    }
+    
+    public City createCity(String name, int population, String pollution) {
+        Element cityElement = element.getOwnerDocument().createElement("name");
+        appendChildTextElement("name", name, cityElement);
+        appendChildTextElement("population", ""+population, cityElement);
+        appendChildTextElement("pollution", pollution, cityElement);
+        element.getElementsByTagName("cities").item(0).appendChild(cityElement);
+        City result = City.factory(cityElement);
+        return result;
+    }
+
+    protected void appendChildTextElement(String tag, String name, Element cityElement) throws DOMException {
+        Element newElement = element.getOwnerDocument().createElement(tag);
+        newElement.setTextContent(name);
+        cityElement.appendChild(newElement);
+    }
 
     @Override
     public String getName() {

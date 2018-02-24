@@ -10,6 +10,7 @@ import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.TransformerFactoryConfigurationError;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Document;
@@ -77,13 +78,23 @@ public class DOMParser {
             throws SAXException, ParserConfigurationException, IOException, TransformerConfigurationException, TransformerException {
 
         File file = new File(filename);
+        StreamResult streamResult = new StreamResult(file);
+        writeResult(streamResult);
+    }
+
+    public void outputDocumentToConsole() 
+            throws SAXException, ParserConfigurationException, IOException, TransformerConfigurationException, TransformerException {
+
+        StreamResult streamResult = new StreamResult(System.out);
+        writeResult(streamResult);
+    }    
+    
+    private void writeResult(StreamResult streamResult) throws TransformerException, TransformerConfigurationException, IllegalArgumentException, TransformerFactoryConfigurationError {
         TransformerFactory tFactory  = TransformerFactory.newInstance();
         Transformer transformer      = tFactory.newTransformer();
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-        
         DOMSource source = new DOMSource(document);
-        StreamResult result = new StreamResult(file);
-        transformer.transform(source, result);
+        transformer.transform(source, streamResult);
     }
 
 }
