@@ -49,6 +49,13 @@ public class WorldTest {
     }
 
     @Test
+    public void testGetNodeNameShouldBeWorld() {
+        World world = new World(document.getDocumentElement());
+        assertThat(world.getNodeName(), is("world"));
+    }
+
+    
+    @Test
     public void testGetNameShouldReturnWorld() {
         World world = new World(document.getDocumentElement());
         assertThat(world, is(notNullValue()));

@@ -23,6 +23,10 @@ public class World {
      * @return
      */
     public String getName() {
+        return getNodeName();
+    }
+
+    protected String getNodeName() {
         return element.getNodeName();
     }
     
