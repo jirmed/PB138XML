@@ -25,6 +25,8 @@ import org.xml.sax.SAXException;
  */
 public class WorldTest {
 
+    private World world;
+
     public WorldTest() {
     }
     
@@ -42,6 +44,7 @@ public class WorldTest {
 
     @Before
     public void setUp() {
+        this.world = new World(document.getDocumentElement());
     }
 
     @After
@@ -50,16 +53,16 @@ public class WorldTest {
 
     @Test
     public void testGetNodeNameShouldBeWorld() {
-        World world = new World(document.getDocumentElement());
-        assertThat(world.getNodeName(), is("world"));
+        World testWorld = this.world;
+        assertThat(testWorld.getNodeName(), is("world"));
     }
 
     
     @Test
     public void testGetNameShouldReturnWorld() {
-        World world = new World(document.getDocumentElement());
-        assertThat(world, is(notNullValue()));
-        assertThat(world.getName(), is("world"));
+        World testWorld = this.world;
+        assertThat(testWorld.getName(), is("world"));
     }
+
 
 }

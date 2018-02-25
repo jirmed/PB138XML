@@ -11,8 +11,7 @@ import org.w3c.dom.Element;
  *
  * @author jirka
  */
-public class World {
-    private Element element;
+public class World extends Part {
 
     public World(Element documentElement) {
         this.element = documentElement;
@@ -22,12 +21,10 @@ public class World {
      *
      * @return
      */
+    @Override
     public String getName() {
         return getNodeName();
     }
 
-    protected String getNodeName() {
-        return element.getNodeName();
-    }
     
 }
