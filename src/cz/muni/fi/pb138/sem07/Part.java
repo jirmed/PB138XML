@@ -5,6 +5,7 @@
  */
 package cz.muni.fi.pb138.sem07;
 
+import org.w3c.dom.DOMException;
 import org.w3c.dom.Element;
 
 /**
@@ -13,7 +14,7 @@ import org.w3c.dom.Element;
  */
 public abstract class Part {
     
-    protected Element element;
+    protected Element partElement;
 
     public Part() {
     }
@@ -25,7 +26,11 @@ public abstract class Part {
     public abstract String getName();
 
     protected String getNodeName() {
-        return element.getNodeName();
+        return partElement.getNodeName();
+    }
+
+    protected String getChildNodeText(String tag) throws DOMException {
+        return partElement.getElementsByTagName(tag).item(0).getTextContent();
     }
     
 }

@@ -23,23 +23,11 @@ import org.xml.sax.SAXException;
  *
  * @author jirka
  */
-public class WorldTest {
+public class WorldTest extends PartTestAbstract {
 
     private World world;
 
     public WorldTest() {
-    }
-    
-    private static Document document;
-
-    @BeforeClass
-    public static void setUpClass() throws ParserConfigurationException, SAXException, IOException {
-        DOMParser domParser = new DOMParser("src/continent.xml", false, false);
-        WorldTest.document = domParser.getDocument();
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
     }
 
     @Before
@@ -52,17 +40,19 @@ public class WorldTest {
     }
 
     @Test
-    public void testGetNodeNameShouldBeWorld() {
+    public void testGetNodeName() {
         World testWorld = this.world;
         assertThat(testWorld.getNodeName(), is("world"));
     }
 
-    
     @Test
-    public void testGetNameShouldReturnWorld() {
+    public void testGetName() {
         World testWorld = this.world;
         assertThat(testWorld.getName(), is("world"));
     }
 
-
+    @Test
+    public void testGetContinents() {
+        assertThat(world.getContinents().length, is(4));
+    }
 }

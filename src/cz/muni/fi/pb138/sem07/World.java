@@ -6,6 +6,7 @@
 package cz.muni.fi.pb138.sem07;
 
 import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
 /**
  *
@@ -14,9 +15,9 @@ import org.w3c.dom.Element;
 public class World extends Part {
 
     public World(Element documentElement) {
-        this.element = documentElement;
+        this.partElement = documentElement;
     }
-    
+
     /**
      *
      * @return
@@ -26,5 +27,16 @@ public class World extends Part {
         return getNodeName();
     }
 
-    
+    public Continent[] getContinents() {
+        Continent[] continents = null;
+        NodeList continentsNl = this.partElement.getElementsByTagName("continent");
+        if (!continentsNl.equals(null)) {
+            int continentCount = continentsNl.getLength();
+            continents = new Continent[continentCount];
+            for (int i = 0; i < continentCount; i++) {
+                continents[i] = new Continent((Element) continentsNl.item(i));
+            }
+        }
+        return continents;
+    }
 }
