@@ -22,11 +22,13 @@ import org.xml.sax.SAXException;
 public abstract class PartTestAbstract {
     
     protected static Document document;
+    protected static Document originalDocument;
 
     @BeforeClass
     public static void setUpClass() throws ParserConfigurationException, SAXException, IOException {
         DOMParser domParser = new DOMParser("src/continent.xml", false, false);
         document = domParser.getDocument();
+        originalDocument = document;
     }
 
     @AfterClass

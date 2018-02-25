@@ -58,7 +58,7 @@ public class CityTest extends PartTestAbstract{
 
     @Test
     public void testGetPollution() {
-        assertThat(city.getPullution(), is("medium"));
+        assertThat(city.getPollution(), is("medium"));
     }
     
     

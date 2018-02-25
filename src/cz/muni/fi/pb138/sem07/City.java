@@ -27,7 +27,7 @@ public class City extends Part {
         return Integer.parseInt(getChildNodeText("population"));
     }
 
-    public String getPullution() {
+    public String getPollution() {
         return getChildNodeText("pollution");
     }
 

@@ -47,7 +47,11 @@
                 <population>9278441</population>
                 <pollution>high</pollution>
             </city>
-            
+            <city id="2">
+                <name>Lagos</name> 
+                <population>16060303</population>
+                <pollution>high</pollution>
+            </city>
             <city id="3">
                 <name>Kinshasa</name> 
                 <population>9735000</population>
@@ -73,15 +77,10 @@
                 <population>4239988</population>
                 <pollution>high</pollution>
             </city>
-        <name>
-<name>New City</name>
-<population>1000</population>
-<pollution>high</pollution>
-</name>
-</cities>
+        </cities>
     </continent>
 
-    <continent name="oceania">
+    <continent name="europe">
         <cities>
             <city id="1">
                 <name>London</name> 

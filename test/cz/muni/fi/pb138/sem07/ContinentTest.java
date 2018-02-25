@@ -25,6 +25,7 @@ public class ContinentTest extends PartTestAbstract {
 
     @Override
     public void tearDown() {
+        document = originalDocument;
     }
 
     @Override
@@ -46,9 +47,27 @@ public class ContinentTest extends PartTestAbstract {
 
     }
 
-    @Test 
+    @Test
     public void testGetLargestCity() {
-      City largestCity = continent.getLargestCity();
-      assertThat(largestCity.getName(),is("Shangai"));
-}
+        City largestCity = continent.getLargestCity();
+        assertThat(largestCity.getName(), is("Shangai"));
+    }
+    
+    @Test
+    public void testSetName() {
+        continent.setName("oceania");
+        assertThat(continent.getName(), is("oceania"));
+    }
+    
+/*    @Test
+    public void testCreateCity() {
+        String name = "New City";
+        int population = 1234;
+        String pollution = "low";
+        City newCity = this.continent.createCity(name, population, pollution);
+        assertThat(newCity.getName(), is(name));
+        assertThat(newCity.getPopulation(), is(population));
+        assertThat(newCity.getPollution(), is(pollution));
+    }
+*/
 }
