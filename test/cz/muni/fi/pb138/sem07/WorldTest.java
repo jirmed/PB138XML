@@ -55,4 +55,9 @@ public class WorldTest extends PartTestAbstract {
     public void testGetContinents() {
         assertThat(world.getContinents().length, is(4));
     }
+    
+    @Test
+    public void testGetContinent() {
+    assertThat(world.getContinent("africa").getName(), is("africa"));
+    }
 }

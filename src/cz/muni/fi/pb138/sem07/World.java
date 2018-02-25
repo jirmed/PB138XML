@@ -39,4 +39,16 @@ public class World extends Part {
         }
         return continents;
     }
+    
+    public Continent getContinent(String name) {
+        Continent result = null;
+        Continent[] continents = getContinents();
+        for (Continent continent : continents) {
+            if (continent.getName().equals(name)) {
+                result = continent;
+                break;
+            }
+        }
+        return result;
+    }
 }
