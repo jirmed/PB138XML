@@ -29,6 +29,7 @@ public class CityTest extends PartTestAbstract{
     @Before
     @Override
     public void setUp() {
+        super.setUp();
         this.city = new City((Element)document.getElementsByTagName("city").item(0));
     }
     

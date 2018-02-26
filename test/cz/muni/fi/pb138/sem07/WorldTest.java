@@ -32,6 +32,7 @@ public class WorldTest extends PartTestAbstract {
 
     @Before
     public void setUp() {
+        super.setUp();
         this.world = new World(document.getDocumentElement());
     }
 

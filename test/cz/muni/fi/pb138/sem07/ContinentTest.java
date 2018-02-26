@@ -20,12 +20,12 @@ public class ContinentTest extends PartTestAbstract {
 
     @Override
     public void setUp() {
+        super.setUp();
         continent = new Continent((Element) document.getElementsByTagName("continent").item(0));
     }
 
     @Override
     public void tearDown() {
-        document = originalDocument;
     }
 
     @Override
@@ -59,7 +59,7 @@ public class ContinentTest extends PartTestAbstract {
         assertThat(continent.getName(), is("oceania"));
     }
     
-/*    @Test
+    @Test
     public void testCreateCity() {
         String name = "New City";
         int population = 1234;
@@ -69,5 +69,5 @@ public class ContinentTest extends PartTestAbstract {
         assertThat(newCity.getPopulation(), is(population));
         assertThat(newCity.getPollution(), is(pollution));
     }
-*/
+
 }

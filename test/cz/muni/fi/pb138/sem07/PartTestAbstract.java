@@ -22,27 +22,13 @@ import org.xml.sax.SAXException;
 public abstract class PartTestAbstract {
     
     protected static Document document;
-    protected static Document originalDocument;
-
-    @BeforeClass
-    public static void setUpClass() throws ParserConfigurationException, SAXException, IOException {
-        DOMParser domParser = new DOMParser("src/continent.xml", false, false);
-        document = domParser.getDocument();
-        originalDocument = document;
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
-    }
-
-    public PartTestAbstract() {
-    }
+    private Document originalDocument;
 
     @Before
-    public abstract void setUp();
-
-    @After
-    public abstract void tearDown();
+    public void setUp() throws ParserConfigurationException, SAXException, IOException {
+        DOMParser domParser = new DOMParser("src/continent.xml", false, false);
+        document = domParser.getDocument();
+    }
 
     @Test
     public abstract void testGetNodeName();
